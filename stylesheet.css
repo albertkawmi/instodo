@@ -1,0 +1,52 @@
+html {
+	font-family: arial;
+}
+
+form {
+    display: inline-block;
+}
+
+#button{
+    display: inline-block;
+    height:20px;
+	width:70px;
+	background-color:#cc0000;
+	font-family:arial;
+	font-weight:bold;
+	color:#ffffff;
+	border-radius: 5px;
+	text-align:center;
+	margin-top:2px;
+}
+
+.list {
+	
+}
+
+.item, input {
+	border: none;
+	border-bottom: dotted 1px black;
+}
+
+.container {
+	width: 280px;
+	margin: 0 auto;
+}
+
+.trash {
+	float: right;
+	color: white;
+	background-color: red;
+	width: 15px;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: center;
+}
+
+.check-box, .item {
+	float: left;
+}
+
+.form-div, .row {
+	clear: both;
+}
