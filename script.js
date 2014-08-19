@@ -1,5 +1,5 @@
 function addTodo() {
-    var toAdd = $("input[name=checkListItem]").val();
+    var toAdd = $("input[name=add-item]").val();
     //toAdd = '<div class="item">' + toAdd + '</div>';
     $(".list").append(
     	'<div class="row">' +
@@ -9,7 +9,7 @@ function addTodo() {
     	'</div>'
     	);
 
-    $("input[name=checkListItem]").val("");
+    $("input[name=add-item]").val("");
 }
 
 $(document).ready(function(){
@@ -22,6 +22,12 @@ $(document).ready(function(){
     $(document).on('click', ".unchecked", function() {
         $(this).next('.item').toggleClass('strike');
         $(this).toggleClass('checked');
+    });
+
+    $("input[name=add-item]").keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+            addTodo;
+        }
     });
 
 
