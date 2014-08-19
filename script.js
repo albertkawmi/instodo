@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     $("input[name=add-item]").keypress(function(e){
         if(e.which == 13){//Enter key pressed
-            addTodo;
+            addTodo();
         }
     });
 
