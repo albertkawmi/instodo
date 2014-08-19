@@ -3,21 +3,27 @@ function addTodo() {
     //toAdd = '<div class="item">' + toAdd + '</div>';
     $(".list").append(
     	'<div class="row">' +
-    	'<div class="check-box"><input type="checkbox" name="tick" value="0"></div>' +
-		'<div class="item">' + toAdd + '</div>' +
-    	'<div class="trash">x</div>' +
+    	  '<div class="unchecked"></div>' +
+		  '<div class="item" contenteditable>' + toAdd + '</div>' +
+    	  '<div class="trash"><span class="icon">&#9747</span></div>' +
     	'</div>'
     	);
+
+    $("input[name=checkListItem]").val("");
 }
 
 $(document).ready(function(){
-    $("#button").click(addTodo);
-    
-    $(document).on('click', '.item', function(){
-        $(this).remove();
+    $("#add").click(addTodo);
+
+    $(document).on('click', '.trash', function() {
+        $(this).parent('.row').remove();
     });
+
+    $(document).on('click', ".unchecked", function() {
+        $(this).next('.item').toggleClass('strike');
+        $(this).toggleClass('checked');
+    });
+
+
 });
 
-$(".trash").click(function() {
-  $(this).closest("div").remove();
-});

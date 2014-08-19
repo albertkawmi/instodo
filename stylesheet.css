@@ -1,52 +1,191 @@
+/************************************************************************************************************/
+textarea, 
+select, 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="email"], 
+input[type="month"], 
+input[type="number"], 
+input[type="password"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="text"], 
+input[type="time"], 
+input[type="url"], 
+input[type="week"] {
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+
+-webkit-background-clip: padding;
+-moz-background-clip: padding;
+background-clip:padding-box;
+
+-webkit-border-radius:0;
+-moz-border-radius:0;
+-ms-border-radius:0;
+-o-border-radius:0;
+border-radius:0;
+
+-webkit-appearance:none;
+
+background-color:#fff;
+
+color:#000;
+
+outline:0;
+
+margin:0;
+
+padding: 0.5rem;
+
+text-align: left;
+
+font-size: 1rem;
+
+height: auto;
+
+vertical-align: middle;
+
+}
+
+select, select, select{
+
+background:#fff url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+
+background-repeat: no-repeat;
+
+background-position: 97% center;
+
+padding:0 25px 0 8px;
+
+font-size: 1rem
+
+}
+/************************************************************************************************************/
+
 html {
 	font-family: arial;
+	font-size: 14px;
 }
 
-form {
-    display: inline-block;
+body {
+	background-color: gray;
 }
 
-#button{
-    display: inline-block;
-    height:20px;
-	width:70px;
-	background-color:#cc0000;
-	font-family:arial;
-	font-weight:bold;
-	color:#ffffff;
-	border-radius: 5px;
+div, input, textarea, fieldset, label, nav, nav li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+div {
+	vertical-align: top;
+	display: inline-block;
+}
+
+#add {
+    height:15px;
+	width:15px;
+	background-color:silver;
+	color:white;
 	text-align:center;
-	margin-top:2px;
+	margin:0;
+	vertical-align: middle;
+	font-size: 12px;
+	cursor: default;
 }
 
-.list {
-	
+#add:hover {
+	background-color: green;
 }
 
-.item, input {
-	border: none;
+.form-div {
 	border-bottom: dotted 1px black;
+	width: 280px;
+	padding: 0;
+	font-size: 0;
+}
+
+.input-box {
+	width: 265px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+input {
+	border: 0;
+	width: 100%;
+	margin:0;
+	padding: 0;
 }
 
 .container {
-	width: 280px;
+	display: block;
+	width: 300px;
 	margin: 0 auto;
+	background-color: white;
+	padding: 10px;
+	box-shadow: 2px 2px 2px black;
+}
+
+.list-title {
+	display: block;
+	width: 100%;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 5px 0;
+	text-align: center;
+	text-shadow: 1px 1px silver;
+}
+
+.row {
+	border-bottom: dotted 1px silver;
+	overflow: hidden;
+	padding: 5px 0;
+}
+
+
+.unchecked {
+	width: 15px;
+	height: 15px;
+	background-color: silver;
+	margin-top: 2px;
+}
+
+.unchecked:hover {
+	border: solid 2px green;
+}
+
+.checked {
+	background-color: green;
+}
+
+.item {
+	width: 250px;
+	padding: 0 8px;
 }
 
 .trash {
 	float: right;
-	color: white;
-	background-color: red;
+	color: silver;
 	width: 15px;
-	font-size: 12px;
+	height: 15px;
+	font-size: 10px;
+	font-weight: bold;
 	text-align: center;
-	vertical-align: center;
 }
 
-.check-box, .item {
-	float: left;
+.trash:hover {
+	color: red;
+	cursor: default;
 }
 
-.form-div, .row {
-	clear: both;
+.icon { display:inline-block; vertical-align: middle; margin: 0 auto; }
+
+.strike {
+	text-decoration: line-through;
+	color: gray;
 }
