@@ -31,7 +31,7 @@ border-radius:0;
 
 -webkit-appearance:none;
 
-background-color:#fff;
+background-color: #FCF0AD;;
 
 color:#000;
 
@@ -72,20 +72,27 @@ html {
 }
 
 body {
-	background-color: gray;
+	background-color: white;
 }
 
-div, input, textarea, fieldset, label, nav, nav li {
+div, input, textarea, fieldset, label, nav, li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-div {
+div, ul, li {
 	vertical-align: top;
 	display: inline-block;
 }
 
-#add {
+ul, li {
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+	list-style: none;
+}
+
+.add-button {
     height:15px;
 	width:15px;
 	background-color:silver;
@@ -97,11 +104,11 @@ div {
 	cursor: default;
 }
 
-#add:hover {
+.add-button:hover {
 	background-color: green;
 }
 
-.form-div {
+.add-row {
 	border-bottom: dotted 1px black;
 	width: 280px;
 	padding: 0;
@@ -113,6 +120,7 @@ div {
 	margin: 0;
 	padding: 0;
 	vertical-align: middle;
+	background-color: #FCF0AD;
 }
 
 input {
@@ -120,24 +128,32 @@ input {
 	width: 100%;
 	margin:0;
 	padding: 0;
+	background-color: #FCF0AD;
+	text-overflow: ellipsis;
 }
+
+
 
 .container {
 	display: block;
-	width: 300px;
+	max-width: 960px;
 	margin: 0 auto;
-	background-color: white;
+}
+
+.list-holder, .new-list {
+	background-color: #FCF0AD;
 	padding: 10px;
-	box-shadow: 2px 2px 2px black;
+	box-shadow: 1px 1px 1px black;
+	margin: 5px;
+	width: 300px;
 }
 
 .list-title {
 	display: block;
-	width: 100%;
+	width: 265px;
 	font-size: 24px;
 	font-weight: bold;
 	padding: 5px 0;
-	text-align: center;
 	text-shadow: 1px 1px silver;
 }
 
@@ -148,18 +164,18 @@ input {
 }
 
 
-.unchecked {
+.tickbox {
 	width: 15px;
 	height: 15px;
 	background-color: silver;
 	margin-top: 2px;
 }
 
-.unchecked:hover {
+.tickbox:hover {
 	border: solid 2px green;
 }
 
-.checked {
+.ticked {
 	background-color: green;
 }
 
@@ -168,7 +184,7 @@ input {
 	padding: 0 8px;
 }
 
-.trash {
+.delete-list, .delete-item {
 	float: right;
 	color: silver;
 	width: 15px;
@@ -178,14 +194,37 @@ input {
 	text-align: center;
 }
 
-.trash:hover {
+.delete-list:hover, .delete-item:hover {
 	color: red;
 	cursor: default;
 }
 
-.icon { display:inline-block; vertical-align: middle; margin: 0 auto; }
+.delete-list {
+	border: solid 1px silver;
+}
+
+.delete-list:hover {
+	border-color: red;
+}
+
+.plus-symbol { display:inline-block; vertical-align: middle; margin: 0 auto; }
 
 .strike {
 	text-decoration: line-through;
 	color: gray;
+}
+
+.new-list {
+	color: silver;
+	background-color: white;
+	font-size: 18px;
+}
+
+.new-list:hover {
+	color: black;
+	background-color: #FCF0AD;
+}
+
+.icon {
+	vertical-align: top;
 }

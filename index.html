@@ -4,16 +4,30 @@
     	<title>To Do</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
         <script src="jquery-1.11.1.min.js"></script>
+        <script src="jquery-ui.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
 	<div class="container">
-		<div class="list-title" contenteditable>To-do List</div>
-		<div class="list"></div>
-		<div class="form-div">
-			<div class="input-box"><input placeholder="Add an item..." type="text" name="add-item"/></div>
-			<div id="add"><span class="icon">+</span></div>
+		<template id="list-template">
+		<div class="list-holder">
+			<div class="delete-list"><span class="icon">&#9747;</span></div>
+			<div class="list-title" contenteditable>To-do List</div>
+			<ul class="list"></ul>			
+			<div class="add-row">
+				<input class="input-box" placeholder="Add an item..." type="text" />
+				<div class="add-button"><span class="plus-symbol">+</span></div>
+			</div>
 		</div>
+		</template>
+		<div class="new-list">+ New list</div>
+		<template id="new-row"><!--
+			--><li class="row"><!--
+				--><div class="tickbox"></div><!--
+	            --><input class="item" value="Test"><!--
+	            --><div class="delete-item"><span class="icon">&#9747;</span></div><!--
+            --></li><!--
+		--></template>
 	</div>	
 	</body>
 </html>
