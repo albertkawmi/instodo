@@ -2,23 +2,24 @@ function saveLocal() {
 
     var status = $('.container')
                 .clone(true)       /* get a clone of the element and from it */
-                .find('.new-list') /* retrieve the button, then */
+                .find('.new-list') /* retrieve the new-list button, then */
                 .remove()          /* remove it, */
                 .end()             /* return to the previous selection and */
                 .html() ; 
-    console.log(status);
+    //console.log(status);
     localStorage.setItem("status", status);
 }
 
 function addItem(element) {
         
-        element.parentsUntil('add-row').siblings('.list').append(
-                '<li class="row">' +
-                '<div class="tickbox"></div>' +
-                '<input class="item" value="' + element.val() + '">' +
-                '<div class="delete-item"><span class="icon">&#9747;</span></div>' +
-                '</li>'
-                ); 
+        var itemValue = element.val();
+
+        var appendRow = $('#new-row')
+                        .clone(true)
+                        .html()
+                        .replace('Empty Item', itemValue) ;
+
+        element.parentsUntil('add-row').siblings('.list').append(appendRow);
 
         element.val("");
         element.focus();
@@ -26,16 +27,14 @@ function addItem(element) {
         }
 
 function makeSortable() {
-    $('.list').sortable({ handle: '.tickbox', connectWith: '.list' });
+    $('.list').sortable({ handle: '.tickbox', connectWith: '.list' }); // All lists sortable and interconnected. Tickbox is a handle to drag with.
     $('.list').disableSelection(); 
 }
 
 function newList() {
-////// Make all lists sortable, tickbox acts as a handle to drag rows
     $('.new-list').before($('#list-template').html());  
     makeSortable();      
 }
-
 
 
 $(document).ready(function(){ 
@@ -88,6 +87,9 @@ $(document).ready(function(){
     $(document).on('click', '.delete-list', function() {
         $(this).parent('.list-holder').remove();
     });
+
+////// Save everything on window unload
+    $(window).bind("beforeunload", saveLocal);
 
 ////// END    
 });
