@@ -7,7 +7,7 @@ function saveLocal() {
                 .end()             /* return to the previous selection and */
                 .html() ; 
     //console.log(status);
-    localStorage.setItem("status", status);
+    //localStorage.setItem("status", status);
 }
 
 function addItem(element) {
@@ -23,7 +23,7 @@ function addItem(element) {
 
         element.val("");
         element.focus();
-        saveLocal();
+        //saveLocal();
         }
 
 function makeSortable() {
@@ -89,7 +89,7 @@ $(document).ready(function(){
     });
 
 ////// Save everything on window unload
-    $(window).bind("beforeunload", saveLocal);
+    //$(window).bind("beforeunload", saveLocal);
 
 ////// END    
 });
