@@ -80,7 +80,7 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Delete a row
-    $(document).on('click', '.delete-item', function() {
+    $(document).on('click swipeleft', '.delete-item', function() {
         $(this).parent('.row').remove();
     });
 
