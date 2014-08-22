@@ -252,6 +252,10 @@ a:hover{
 	vertical-align: top;
 }
 
+template {
+	display: none;
+}
+
 ::-webkit-input-placeholder { color: #BCB381; }
 :-moz-placeholder { color: #BCB381; }
 ::-moz-placeholder { color: #BCB381; }
