@@ -40,7 +40,7 @@ function newList() {
 
 ////// Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$(document).ready(function(){ 
+$(document).on('ready pagecreate',function(){ 
 
 ////// If no stored data create the 'welcome' list by default
     if(localStorage.getItem("status") && localStorage.getItem("status") !== "") {
