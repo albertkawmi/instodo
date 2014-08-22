@@ -31,7 +31,7 @@ border-radius:0;
 
 -webkit-appearance:none;
 
-background-color: #FCF0AD;
+background-color: #FCF0AD;;
 
 color:#000;
 
@@ -72,13 +72,17 @@ html {
 }
 
 body {
-	background-color: white;
+	background-color: black;
+	background-image: url('chalkboard.jpg');
+    background-repeat: repeat;
 }
 
 div, input, textarea, fieldset, label, nav, li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box; 
+  border-radius: 2px;
+}
 
 div, ul, li {
 	vertical-align: top;
@@ -95,7 +99,7 @@ ul, li {
 .add-button {
     height:15px;
 	width:15px;
-	background-color:silver;
+	background-color:#E2D89B;
 	color:white;
 	text-align:center;
 	margin:0;
@@ -105,11 +109,11 @@ ul, li {
 }
 
 .add-button:hover {
-	background-color: green;
+	background-color: #84962B;
 }
 
 .add-row {
-	border-bottom: dotted 1px black;
+	border-bottom: dotted 1px #E2D89B;
 	width: 280px;
 	padding: 0;
 	font-size: 0;
@@ -132,8 +136,6 @@ input {
 	text-overflow: ellipsis;
 }
 
-
-
 .container {
 	display: block;
 	max-width: 960px;
@@ -154,11 +156,11 @@ input {
 	font-size: 24px;
 	font-weight: bold;
 	padding: 5px 0;
-	text-shadow: 1px 1px silver;
+	text-shadow: 1px 1px #E2D89B;
 }
 
 .row {
-	border-bottom: dotted 1px silver;
+	border-bottom: dotted 1px #E2D89B;
 	overflow: hidden;
 	padding: 5px 0;
 }
@@ -167,16 +169,16 @@ input {
 .tickbox {
 	width: 15px;
 	height: 15px;
-	background-color: silver;
+	background-color: #E2D89B;
 	margin-top: 2px;
 }
 
 .tickbox:hover {
-	border: solid 2px green;
+	border: solid 3px #84962B;
 }
 
 .ticked {
-	background-color: green;
+	background-color: #84962B;
 }
 
 .item {
@@ -186,7 +188,7 @@ input {
 
 .delete-list, .delete-item {
 	float: right;
-	color: silver;
+	color: #BCB381;
 	width: 15px;
 	height: 15px;
 	font-size: 10px;
@@ -194,30 +196,36 @@ input {
 	text-align: center;
 }
 
+.hidden {
+	visibility: hidden;
+}
+
 .delete-list:hover, .delete-item:hover {
-	color: red;
+	color: #c32424;
 	cursor: default;
 }
 
 .delete-list {
-	border: solid 1px silver;
+	border: solid 1px #E2D89B;
 }
 
 .delete-list:hover {
-	border-color: red;
+	border-color: #BCB381;
 }
 
 .plus-symbol { display:inline-block; vertical-align: middle; margin: 0 auto; }
 
 .strike {
 	text-decoration: line-through;
-	color: gray;
+	color: #84962B;
 }
 
 .new-list {
-	color: silver;
-	background-color: white;
+	color: #E2D89B;
+	background-color: rgba(128,128,128,0.8);
 	font-size: 18px;
+	font-weight: bold;
+	width: auto;
 }
 
 .new-list:hover {
@@ -228,3 +236,8 @@ input {
 .icon {
 	vertical-align: top;
 }
+
+::-webkit-input-placeholder { color: #BCB381; }
+:-moz-placeholder { color: #BCB381; }
+::-moz-placeholder { color: #BCB381; }
+:-ms-input-placeholder { color: #BCB381; }

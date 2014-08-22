@@ -67,6 +67,15 @@ $(document).ready(function(){
             }
         });   
 
+////// Show crosses on row hover
+    $(document).on('mouseover', '.row', function(){
+        $(this).children('.delete-item').removeClass('hidden');
+    });
+
+    $(document).on('mouseleave', '.row', function(){
+        $(this).children('.delete-item').addClass('hidden');
+    });
+
 ////// Delete a row
     $(document).on('click', '.delete-item', function() {
         $(this).parent('.row').remove();
