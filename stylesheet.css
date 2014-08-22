@@ -77,10 +77,6 @@ body {
     background-repeat: repeat;
 }
 
-div {
-	cursor: pointer;
-}
-
 div, input, textarea, fieldset, label, nav, li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -109,7 +105,7 @@ ul, li {
 	margin:0;
 	vertical-align: middle;
 	font-size: 12px;
-	cursor: default;
+	cursor: pointer;
 }
 
 .add-button:hover {
@@ -213,6 +209,7 @@ a:hover{
 	font-size: 10px;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
 }
 
 .hidden {
@@ -221,7 +218,7 @@ a:hover{
 
 .delete-list:hover, .delete-item:hover {
 	color: #c32424;
-	cursor: default;
+	cursor: pointer;
 }
 
 .delete-list {
