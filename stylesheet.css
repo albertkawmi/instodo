@@ -242,11 +242,13 @@ a:hover{
 	font-size: 18px;
 	font-weight: bold;
 	width: auto;
+	cursor: pointer;
 }
 
 .new-list:hover {
 	color: black;
 	background-color: #FCF0AD;
+	cursor: pointer;
 }
 
 .icon {
