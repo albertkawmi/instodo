@@ -136,10 +136,25 @@ input {
 	text-overflow: ellipsis;
 }
 
-.container {
+.container, footer {
 	display: block;
 	max-width: 960px;
 	margin: 0 auto;
+}
+
+footer {
+	color: gray;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+footer a {
+	color: silver;
+}
+
+a:hover{
+	text-decoration: none;
 }
 
 .list-holder, .new-list {

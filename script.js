@@ -7,7 +7,7 @@ function saveLocal() {
                 .end()             /* return to the previous selection and */
                 .html() ; 
     //console.log(status);
-    //localStorage.setItem("status", status);
+    localStorage.setItem("status", status);
 }
 
 function addItem(element) {
@@ -44,7 +44,8 @@ $(document).ready(function(){
         $(document).find('.container').prepend(localStorage.getItem("status"));
         makeSortable();
     } else {
-        newList();
+        $('.new-list').before($('#welcome-list').html());
+        makeSortable();
     }
     
 
@@ -98,7 +99,7 @@ $(document).ready(function(){
     });
 
 ////// Save everything on window unload
-    //$(window).bind("beforeunload", saveLocal);
+    $(window).bind("beforeunload", saveLocal);
 
 ////// END    
 });
