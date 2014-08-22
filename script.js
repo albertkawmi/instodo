@@ -1,3 +1,5 @@
+////// Function Definitions ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function saveLocal() {
 
     var status = $('.container')
@@ -23,7 +25,6 @@ function addItem(element) {
 
         element.val("");
         element.focus();
-        //saveLocal();
         }
 
 function makeSortable() {
@@ -37,9 +38,11 @@ function newList() {
 }
 
 
+////// Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 $(document).ready(function(){ 
 
-////// Create a list by default
+////// If no stored data create the 'welcome' list by default
     if(localStorage.getItem("status") && localStorage.getItem("status") !== "") {
         $(document).find('.container').prepend(localStorage.getItem("status"));
         makeSortable();
@@ -49,8 +52,7 @@ $(document).ready(function(){
     }
     
 
-////// Add todo items by click or by enter key
-    
+////// Add todo items by click or by enter key    
     $(document).on( 'click','.add-button', function() {
             addItem( $(this).siblings('input') );
         });
@@ -89,9 +91,7 @@ $(document).ready(function(){
     });
 
 ////// Add a new list
-    ///*
     $(document).on('click', '.new-list', newList);
-    //*/
 
 ////// Delete a list
     $(document).on('click', '.delete-list', function() {
@@ -101,5 +101,5 @@ $(document).ready(function(){
 ////// Save everything on window unload
     $(window).bind("beforeunload", saveLocal);
 
-////// END    
+////// END Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 });

@@ -10,6 +10,7 @@
 * Close this list to get started
 * Built with <3 by @AlbertKawmi
 
+Note: I've only tested this in Google Chrome on desktop. Yet to add browser support and mobile functionality.
 ---
 
 ### Learning jQuery
