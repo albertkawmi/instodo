@@ -77,7 +77,11 @@ body {
     background-repeat: repeat;
 }
 
-div, input, textarea, fieldset, label, nav, li, button {
+div {
+	cursor: pointer;
+}
+
+div, input, textarea, fieldset, label, nav, li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; 
