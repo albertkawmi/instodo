@@ -323,11 +323,17 @@ a:hover{
 }
 
 @media screen and (min-width: 320px) and (max-width: 649px) {
+	html, body {
+		padding: 0;
+		margin:0;
+	}
+
 	.container {
-		width: 320px;
+		width: 310px;
 		-webkit-column-count: 1;
 		-moz-column-count: 1;
 		column-count: 1;
+		margin: 0 auto;
 	}
 
 	.tickbox {
@@ -345,13 +351,13 @@ a:hover{
 
 	.delete-list { margin-right: 2px;}
 
-	.delete-item { text-align: right;}
+	.delete-item { text-align: right; width: 50px;}
 
 	.item {
-		max-width: 220px;
+		max-width: 200px;
 		min-height: 30px;
 		font-size: 16px;
 	}
 
-	footer { width: 320px; }
+	footer { width: 100%; }
 }
