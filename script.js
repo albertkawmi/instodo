@@ -91,11 +91,10 @@ $(document).on('ready pagecreate',function(){
             }
         });
 
-////// Show crosses on click or tap of item
-    $(document).on('click tap', '.item', function(){
-        $('.delete-item').addClass('hidden');
-        $(this).children('.delete-item').removeClass('hidden');
-    });
+////// Delete row on swipeleft
+    $(document).on('swipeleft', '.row', function() {
+        $(this).parent('.row').remove();
+    });    
 
 ////// Show crosses on row hover
     $(document).on('mouseover', '.row', function(){
@@ -107,12 +106,12 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Delete a row
-    $(document).on('click tap', '.delete-item', function() {
+    $(document).on('click touchstart', '.delete-item', function() {
         $(this).parent('.row').remove();
     });
 
 ////// Toggle 'ticked' for tickboxes
-    $(document).on('click tap', '.tickbox', function() {
+    $(document).on('click touchstart', '.tickbox', function() {
         $(this).next('.item').toggleClass('strike');
         $(this).toggleClass('ticked');
     });
@@ -121,7 +120,7 @@ $(document).on('ready pagecreate',function(){
     $(document).on('click tap', '.new-list', newList);
 
 ////// Delete a list
-    $(document).on('click tap', '.delete-list', function() {
+    $(document).on('click touchstart', '.delete-list', function() {
         $(this).parent('.list-holder').remove();
     });
 
