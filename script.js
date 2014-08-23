@@ -89,7 +89,13 @@ $(document).on('ready pagecreate',function(){
             if(e.which == 13){ //Enter key pressed
                 $(this).blur();
             }
-        });   
+        });
+
+////// Show crosses on click or tap of item
+    $(document).on('click tap', '.item', function(){
+        $('.delete-item').addClass('hidden');
+        $(this).children('.delete-item').removeClass('hidden');
+    });
 
 ////// Show crosses on row hover
     $(document).on('mouseover', '.row', function(){
