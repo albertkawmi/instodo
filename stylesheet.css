@@ -329,7 +329,7 @@ a:hover{
 	}
 
 	.container {
-		width: 310px;
+		max-width: 310px;
 		-webkit-column-count: 1;
 		-moz-column-count: 1;
 		column-count: 1;
@@ -359,5 +359,5 @@ a:hover{
 		font-size: 16px;
 	}
 
-	footer { width: 100%; }
+	footer { max-width: 310px; }
 }
