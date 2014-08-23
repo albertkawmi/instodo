@@ -74,7 +74,7 @@ $(document).on('ready pagecreate',function(){
     
 
 ////// Add todo items by click or by enter key    
-    $(document).on( 'click','.add-button', function() {
+    $(document).on( 'click tap','.add-button', function() {
             addItem( $(this).siblings('input') );
         });
     
@@ -101,26 +101,26 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Delete a row
-    $(document).on('click swipeleft', '.delete-item', function() {
+    $(document).on('click tap', '.delete-item', function() {
         $(this).parent('.row').remove();
     });
 
 ////// Toggle 'ticked' for tickboxes
-    $(document).on('click', '.tickbox', function() {
+    $(document).on('click tap', '.tickbox', function() {
         $(this).next('.item').toggleClass('strike');
         $(this).toggleClass('ticked');
     });
 
 ////// Add a new list
-    $(document).on('click', '.new-list', newList);
+    $(document).on('click tap', '.new-list', newList);
 
 ////// Delete a list
-    $(document).on('click', '.delete-list', function() {
+    $(document).on('click tap', '.delete-list', function() {
         $(this).parent('.list-holder').remove();
     });
 
 ////// Save everything on window unload
-    //$(window).bind("beforeunload", saveLocal);
+    $(window).bind("beforeunload", saveLocal);
 
 ////// END Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 });

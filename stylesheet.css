@@ -113,7 +113,6 @@ ul, li {
 }
 
 .add-row {
-	border-bottom: dotted 1px #E2D89B;
 	width: 300px;
 	padding: 5px;
 	font-size: 0;
@@ -138,13 +137,13 @@ input {
 
 .container {
 	-webkit-column-count: 3;
-	-webkit-column-gap: 10px;
+	-webkit-column-gap: 0;
 	-webkit-column-fill: auto;
 	-moz-column-count: 3;
-	-moz-column-gap: 10px;
+	-moz-column-gap: 0;
 	-moz-column-fill: auto;
 	column-count: 3;
-	column-gap: 15px;
+	column-gap: 0;
 	column-fill: auto;
 }
 
@@ -173,7 +172,7 @@ a:hover{
 	background-color: #FCF0AD;
 	padding: 10px;
 	box-shadow: 1px 1px 1px black;
-	margin: 5px;
+	margin: 10px 0 0 0;
 	width: 300px;
 }
 
@@ -312,9 +311,9 @@ a:hover{
 ::-moz-placeholder { color: #BCB381; }
 :-ms-input-placeholder { color: #BCB381; }
 
-@media (max-width: 960px) {
+@media only screen and (min-width: 650px) and (max-width: 960px) {
 	.container {
-		width: 620px;
+		width: 640px;
 		-webkit-column-count: 2;
 		-moz-column-count: 2;
 		column-count: 2;
@@ -323,7 +322,7 @@ a:hover{
 	footer { width: 620px; }
 }
 
-@media (max-width: 680px) {
+@media screen and (min-width: 320px) and (max-width: 649px) {
 	.container {
 		width: 320px;
 		-webkit-column-count: 1;
