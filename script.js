@@ -25,18 +25,40 @@ function addItem(element) {
 
         element.val("");
         element.focus();
+        $(".item").keypress(function(e){ 
+            $(this).blur();
+            return e.which != 13; });
         }
 
 function makeSortable() {
     $('.list').sortable({ handle: '.tickbox', connectWith: '.list' }); // All lists sortable and interconnected. Tickbox is a handle to drag with.
-    $('.list').disableSelection(); 
+    //$('.list').disableSelection(); // Not needed because I'm using a handle and need my divs to be contenteditable
+    $('.container').sortable({ handle: '.list-handle'});
 }
 
-function newList() {
-    $('.new-list').before($('#list-template').html());  
+function welcomeList() {
+    var welcome = $('#list-template')
+                .clone(true)
+                .find('.list-title')
+                .html("Instodo")
+                .end()
+                .html();
+
+    $('.new-list').before(welcome);
     makeSortable();      
 }
 
+function newList() {
+    var blankList = $('#list-template')
+                .clone(true)
+                .find('.row')
+                .remove()
+                .end()
+                .html();
+
+    $('.new-list').before(blankList);  
+    makeSortable();      
+}
 
 ////// Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -47,8 +69,7 @@ $(document).on('ready pagecreate',function(){
         $(document).find('.container').prepend(localStorage.getItem("status"));
         makeSortable();
     } else {
-        $('.new-list').before($('#welcome-list').html());
-        makeSortable();
+        welcomeList();
     }
     
 
@@ -99,7 +120,7 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Save everything on window unload
-    $(window).bind("beforeunload", saveLocal);
+    //$(window).bind("beforeunload", saveLocal);
 
 ////// END Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 });

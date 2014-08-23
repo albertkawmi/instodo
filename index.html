@@ -9,84 +9,64 @@
         <script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
-	<div class="container">
-		<div class="template" id="welcome-list"><!--
-		 --><div class="list-holder"><!--
-		 --><div class="delete-list"><span class="icon">&#9747;</span></div><!--
-		 --><div class="list-title" contenteditable>Instodo</div><!--
-		 --><ul class="list"><!--
-		 	--><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="An instant todo list in your web browser!"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-            --><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="Add a new list with the grey + button"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-            --><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="Click a list's title to rename it"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-            --><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="Drag the checkbox to reorder items"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-            --><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="You can also drag items between lists"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-            --><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="All your data is saved in the browser"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-            --><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="Even if you close this window..."><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-            --><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="Close this list to get started"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-            --><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="Built with &lt;3 by @AlbertKawmi"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-		 --></ul><!--
-		 --><div class="add-row"><!--
-			 --><input class="input-box" placeholder="Add an item..." type="text" /><!--
-			 --><div class="add-button"><span class="plus-symbol">+</span></div><!--
-			 --></div><!--
-		 --></div><!--
-		--></div>
-		<div class="template" id="list-template"><!--
-		 --><div class="list-holder"><!--
-		 --><div class="delete-list"><span class="icon">&#9747;</span></div><!--
-		 --><div class="list-title" contenteditable>To-do List</div><!--
-		 --><ul class="list"></ul><!--
-		 --><div class="add-row"><!--
-			 --><input class="input-box" placeholder="Add an item..." type="text" /><!--
-			 --><div class="add-button"><span class="plus-symbol">+</span></div><!--
-			 --></div><!--
-		 --></div><!--
-		--></div>
+	<ul class="container">
+		<div class="template" id="list-template">
+		 <li class="list-holder">
+		 <div class="list-handle"></div>
+		 <div class="delete-list"><span class="icon">&#9747;</span></div>
+		 <div class="list-title" contenteditable>To-do List</div>
+		 <ul class="list">
+		 	<li class="row">
+				<div class="tickbox"></div>
+	            <div class="item" contenteditable>An instant todo list in your web browser!</div>
+	            <div class="delete-item hidden"><span class="icon">&#9747;</span></div>
+            </li>
+		 	<li class="row">
+				<div class="tickbox"></div>
+	            <div class="item" contenteditable>Add a new list with the grey + button</div>
+	            <div class="delete-item hidden"><span class="icon">&#9747;</span></div>
+            </li>
+		 	<li class="row">
+				<div class="tickbox"></div>
+	            <div class="item" contenteditable>Click a list's title to rename it</div>
+	            <div class="delete-item hidden"><span class="icon">&#9747;</span></div>
+            </li>
+		 	<li class="row">
+				<div class="tickbox"></div>
+	            <div class="item" contenteditable>If you're using a mouse you can drag the checkbox to reorder items or drag items between lists.</div>
+	            <div class="delete-item hidden"><span class="icon">&#9747;</span></div>
+            </li>
+		 	<li class="row">
+				<div class="tickbox"></div>
+	            <div class="item" contenteditable>All your data is saved in the browser even if you close this window</div>
+	            <div class="delete-item hidden"><span class="icon">&#9747;</span></div>
+            </li>
+		 	<li class="row">
+				<div class="tickbox"></div>
+	            <div class="item" contenteditable>Close this list to get started...</div>
+	            <div class="delete-item hidden"><span class="icon">&#9747;</span></div>
+            </li>
+		 	<li class="row">
+				<div class="tickbox"></div>
+	            <div class="item" contenteditable>Built with &lt;3 by @AlbertKawmi</div>
+	            <div class="delete-item hidden"><span class="icon">&#9747;</span></div>
+            </li>
+		 </ul>
+		 <div class="add-row">
+			 <input class="input-box" placeholder="Add an item..." type="text" />
+			 <div class="add-button"><span class="plus-symbol">+</span></div>
+			 </div>
+		 </li>
+		</div>
 		<div class="new-list">+</div>
-		<div class="template" id="new-row"><!--
-			--><li class="row"><!--
-				--><div class="tickbox"></div><!--
-	            --><input class="item" value="Empty Item"><!--
-	            --><div class="delete-item hidden"><span class="icon">&#9747;</span></div><!--
-            --></li><!--
-		--></div>
-	</div>
+		<div class="template" id="new-row">
+			<li class="row">
+				<div class="tickbox"></div>
+	            <div class="item" contenteditable>Empty Item</div>
+	            <div class="delete-item hidden"><span class="icon">&#9747;</span></div>
+            </li>
+		</div>
+	</ul>
 	<footer>Built by <a href="https://twitter.com/albertkawmi">@AlbertKawmi</a> | <a href="https://github.com/albertkawmi/instodo">on Github</a></footer>
 	</body>
 </html>

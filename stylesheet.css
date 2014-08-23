@@ -114,13 +114,13 @@ ul, li {
 
 .add-row {
 	border-bottom: dotted 1px #E2D89B;
-	width: 280px;
-	padding: 0;
+	width: 300px;
+	padding: 5px;
 	font-size: 0;
 }
 
 .input-box {
-	width: 265px;
+	width: 270px;
 	margin: 0;
 	padding: 0;
 	vertical-align: middle;
@@ -134,6 +134,18 @@ input {
 	padding: 0;
 	background-color: #FCF0AD;
 	text-overflow: ellipsis;
+}
+
+.container {
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: auto;
 }
 
 .container, footer {
@@ -165,21 +177,41 @@ a:hover{
 	width: 300px;
 }
 
+.list-holder {
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 0;
+}
+
 .list-title {
 	display: block;
-	width: 265px;
+	width: 255px;
 	font-size: 24px;
 	font-weight: bold;
-	padding: 5px 0;
+	padding: 0;
+	margin-left: 10px;
+	margin-bottom: 5px;
 	text-shadow: 1px 1px #E2D89B;
 }
 
 .row {
 	border-bottom: dotted 1px #E2D89B;
 	overflow: hidden;
-	padding: 5px 0;
+	padding: 5px 10px;
+	font-size: 0;
 }
 
+.list-handle {
+	width: 100%;
+	height: 10px;
+	background-color: #E2D89B;
+	border-radius: 0;
+}
+
+.list-handle:hover {
+	background-color: #84962B;
+}
 
 .tickbox {
 	width: 15px;
@@ -199,6 +231,8 @@ a:hover{
 .item {
 	width: 250px;
 	padding: 0 8px;
+	font-size: 12px;
+	margin-top: 2px;
 }
 
 .delete-list, .delete-item {
@@ -206,10 +240,12 @@ a:hover{
 	color: #BCB381;
 	width: 15px;
 	height: 15px;
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: bold;
 	text-align: center;
 	cursor: pointer;
+	line-height: 12px;
+	margin-top: 3px;
 }
 
 .hidden {
@@ -222,7 +258,13 @@ a:hover{
 }
 
 .delete-list {
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.delete-list .icon {
 	border: solid 1px #E2D89B;
+	padding: 3px;
 }
 
 .delete-list:hover {
@@ -255,6 +297,12 @@ a:hover{
 	vertical-align: top;
 }
 
+.delete-list .icon {
+	vertical-align: middle;
+	line-height: 12px;
+	margin: 0 auto;
+}
+
 .template {
 	display: none;
 }
@@ -263,3 +311,48 @@ a:hover{
 :-moz-placeholder { color: #BCB381; }
 ::-moz-placeholder { color: #BCB381; }
 :-ms-input-placeholder { color: #BCB381; }
+
+@media (max-width: 960px) {
+	.container {
+		width: 620px;
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+
+	footer { width: 620px; }
+}
+
+@media (max-width: 680px) {
+	.container {
+		width: 320px;
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+
+	.tickbox {
+		width: 30px;
+		height: 30px;
+	}
+
+	.delete-list, .delete-item {
+		width: 30px;
+		height: 30px;
+		font-size: 16px;
+		margin-top: 5px;
+		margin-right: 0px;
+	}
+
+	.delete-list { margin-right: 2px;}
+
+	.delete-item { text-align: right;}
+
+	.item {
+		max-width: 220px;
+		min-height: 30px;
+		font-size: 16px;
+	}
+
+	footer { width: 320px; }
+}
