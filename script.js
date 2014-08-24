@@ -25,9 +25,9 @@ function addItem(element) {
 
         element.val("");
         element.focus();
-        $(".item").keypress(function(e){ 
+        /*$(".item").keypress(function(e){ 
             $(this).blur();
-            return e.which != 13; });
+            return e.which != 13; });*/
         }
 
 function makeSortable() {
@@ -48,7 +48,7 @@ function welcomeList() {
     makeSortable();      
 }
 
-function newList() {
+function newList() {$('.set-height').addClass('template');
     var blankList = $('#list-template')
                 .clone(true)
                 .find('.row')
@@ -56,8 +56,9 @@ function newList() {
                 .end()
                 .html();
 
-    $('.new-list').before(blankList);  
-    makeSortable();      
+    $('.new-list').before(blankList);
+
+    makeSortable();   
 }
 
 ////// Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -88,6 +89,7 @@ $(document).on('ready pagecreate',function(){
     $(document).on('keypress', '.item', function(e){
             if(e.which == 13){ //Enter key pressed
                 $(this).blur();
+                return e.which != 13;
             }
         });
 
@@ -125,7 +127,7 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Save everything on window unload
-    $(window).bind("beforeunload", saveLocal);
+    //$(window).bind("beforeunload", saveLocal);
 
 ////// END Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 });

@@ -69,15 +69,19 @@ font-size: 1rem
 html {
 	font-family: arial;
 	font-size: 14px;
+	padding: 0;
+	margin: 0;
 }
 
 body {
 	background-color: black;
 	background-image: url('chalkboard.jpg');
     background-repeat: repeat;
+    padding: 0;
+	margin: 0;
 }
 
-div, input, textarea, fieldset, label, nav, li {
+div, input, textarea, fieldset, label, nav, li, header, footer {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; 
@@ -94,6 +98,10 @@ ul, li {
 	padding: 0;
 	text-indent: 0;
 	list-style: none;
+}
+
+.set-height {
+	height: 500px;
 }
 
 .add-button {
@@ -135,34 +143,53 @@ input {
 	text-overflow: ellipsis;
 }
 
-.container {
+.columns {
 	-webkit-column-count: 3;
 	-webkit-column-gap: 0;
 	-webkit-column-fill: auto;
+	-webkit-column-rule: 0;
 	-moz-column-count: 3;
 	-moz-column-gap: 0;
 	-moz-column-fill: auto;
+	-moz-column-rule: 0;
 	column-count: 3;
 	column-gap: 0;
 	column-fill: auto;
+	column-rule: 0;
+	font-size: 0;
 }
 
-.container, footer {
+.wrap {
 	display: block;
 	max-width: 960px;
+	margin: 40px auto;
+	padding: 0;
+	padding-top: 0px;
+	font-size: 0;
+}
+
+.container {
+	display: block;
 	margin: 0 auto;
+	width: 100%;
 }
 
 footer {
-	color: gray;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	background-color: gray;
+	width: 100%;
+	opacity: 0.6;
+	text-align: center;
+
 }
 
-footer a {
-	color: silver;
-}
+footer a { color: white;}
+
+a { color: #84962B;}
 
 a:hover{
 	text-decoration: none;
@@ -172,7 +199,8 @@ a:hover{
 	background-color: #FCF0AD;
 	padding: 10px;
 	box-shadow: 1px 1px 1px black;
-	margin: 10px 0 0 0;
+	margin: 0;
+	margin-bottom: 10px;
 	width: 300px;
 }
 
@@ -181,6 +209,23 @@ a:hover{
 	-moz-column-break-inside: avoid;
 	column-break-inside: avoid;
 	padding: 0;
+	display: inline-block;
+}
+
+.new-list {
+	color: #E2D89B;
+	background-color: rgba(128,128,128,0.8);
+	font-size: 18px;
+	font-weight: bold;
+	width: auto;
+	cursor: pointer;
+	margin: 0;
+}
+
+.new-list:hover {
+	color: black;
+	background-color: #FCF0AD;
+	cursor: pointer;
 }
 
 .list-title {
@@ -206,6 +251,7 @@ a:hover{
 	height: 10px;
 	background-color: #E2D89B;
 	border-radius: 0;
+	margin-bottom: 5px;
 }
 
 .list-handle:hover {
@@ -264,6 +310,7 @@ a:hover{
 .delete-list .icon {
 	border: solid 1px #E2D89B;
 	padding: 3px;
+	border-radius: 5px;
 }
 
 .delete-list:hover {
@@ -277,20 +324,6 @@ a:hover{
 	color: #84962B;
 }
 
-.new-list {
-	color: #E2D89B;
-	background-color: rgba(128,128,128,0.8);
-	font-size: 18px;
-	font-weight: bold;
-	width: auto;
-	cursor: pointer;
-}
-
-.new-list:hover {
-	color: black;
-	background-color: #FCF0AD;
-	cursor: pointer;
-}
 
 .icon {
 	vertical-align: top;
@@ -312,20 +345,21 @@ a:hover{
 :-ms-input-placeholder { color: #BCB381; }
 
 @media only screen and (min-width: 650px) and (max-width: 960px) {
+	.wrap {
+		max-width: 640px;
+	}
+
 	.container {
-		width: 640px;
 		-webkit-column-count: 2;
 		-moz-column-count: 2;
 		column-count: 2;
 	}
-
-	footer { width: 620px; }
 }
 
 @media screen and (min-width: 320px) and (max-width: 649px) {
-	html, body {
-		padding: 0;
-		margin:0;
+
+	.wrap {
+		width: 100%;
 	}
 
 	.container {
@@ -333,31 +367,29 @@ a:hover{
 		-webkit-column-count: 1;
 		-moz-column-count: 1;
 		column-count: 1;
-		margin: 0 auto;
 	}
 
 	.tickbox {
-		width: 30px;
-		height: 30px;
+		width: 20px;
+		height: 20px;
 	}
 
 	.delete-list, .delete-item {
-		width: 30px;
-		height: 30px;
+		width: 20px;
+		height: 20px;
 		font-size: 16px;
 		margin-top: 5px;
 		margin-right: 0px;
 	}
 
-	.delete-list { margin-right: 2px;}
+	.delete-list { margin-right: 5px; }
 
-	.delete-item { text-align: right; width: 50px;}
+	.delete-item { text-align: right; width: 60px; height: 20px;}
 
 	.item {
 		max-width: 200px;
-		min-height: 30px;
+		min-height: 20px;
 		font-size: 16px;
 	}
 
-	footer { max-width: 310px; }
 }
