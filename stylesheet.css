@@ -182,7 +182,7 @@ footer {
 	bottom: 0;
 	background-color: gray;
 	width: 100%;
-	opacity: 0.6;
+	opacity: 0.7;
 	text-align: center;
 
 }
@@ -200,7 +200,7 @@ a:hover{
 	padding: 10px;
 	box-shadow: 1px 1px 1px black;
 	margin: 0;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	width: 300px;
 }
 
