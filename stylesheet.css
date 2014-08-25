@@ -252,6 +252,7 @@ a:hover{
 	border-radius: 0;
 	margin-bottom: 5px;
 	display:block;
+	cursor: move;
 }
 
 .list-handle:hover {
@@ -349,47 +350,92 @@ a:hover{
 		max-width: 640px;
 	}
 
-	.container {
+	.columns {
 		-webkit-column-count: 2;
 		-moz-column-count: 2;
 		column-count: 2;
 	}
 }
 
-@media screen and (min-width: 320px) and (max-width: 649px) {
+@media screen and (min-width: 0px) and (max-width: 649px) {
 
 	.wrap {
-		width: 100%;
+		width: 280px;
 	}
 
 	.container {
-		max-width: 310px;
+		max-width: 280px;
+	}
+
+	.list-holder {
+		width: 100%;
+	}
+
+	.list-title {
+		width: 220px;
+		position: relative;
+		top: 5px;
+	}
+
+	.columns {
 		-webkit-column-count: 1;
 		-moz-column-count: 1;
 		column-count: 1;
 	}
 
 	.tickbox {
-		width: 20px;
-		height: 20px;
+		width: 25px;
+		height: 25px;
 	}
 
 	.delete-list, .delete-item {
-		width: 20px;
-		height: 20px;
+		width: 25px;
+		height: 25px;
 		font-size: 16px;
-		margin-top: 5px;
-		margin-right: 0px;
+		margin: 0;
+		 
 	}
 
-	.delete-list { margin-right: 5px; }
+	.icon, .delete-list .icon {
+		background-color: #c32424;
+		border: 0;
+		border-radius: 3px;
+		color: white;
+		padding: 10px;
+		position: relative;
+		top: 5px;
+		right: 5px;
+		margin: 0;
+	}
 
-	.delete-item { text-align: right; width: 60px; height: 20px;}
+	.delete-item .icon {
+		top: 15px;
+	}
+
+	.delete-list .icon {
+		background-color: #E2D89B;
+	}
+
+	.delete-list { margin: 10px; }
+
+	.delete-item { text-align: right;  height: 20px;}
 
 	.item {
-		max-width: 200px;
+		max-width: 210px;
 		min-height: 20px;
 		font-size: 16px;
+	}
+
+	.add-button {
+		display: none;
+	}
+
+	footer {
+		position: static;
+	}
+
+	.wrap {
+		margin-bottom: 20px;
 	}
 
 }
