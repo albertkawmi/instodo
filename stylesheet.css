@@ -264,6 +264,7 @@ a:hover{
 	height: 15px;
 	background-color: #E2D89B;
 	margin-top: 2px;
+	cursor: pointer;
 }
 
 .tickbox:hover {
@@ -355,12 +356,103 @@ a:hover{
 		-moz-column-count: 2;
 		column-count: 2;
 	}
+
+	.container {
+		max-width: 600px;
+	}
+
+	.list-holder {
+		width: 280px;
+	}
+
+	.list-handle {
+		height: 20px;
+	}
+
+	.list-title {
+		width: 220px;
+		position: relative;
+		top: 5px;
+		font-size: 30px;
+	}	
+
+	.tickbox {
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		margin-right: 5px;
+	}
+
+	.delete-list { margin: 10px; }
+
+	.delete-item { text-align: right;  height: 20px;}
+
+	.delete-list, .delete-item {
+		width: 25px;
+		height: 25px;
+		font-size: 16px;
+		margin: 0;
+		 
+	}
+
+	.delete-item .icon, .delete-list .icon {
+		background-color: #c32424;
+		border: 0;
+		border-radius: 3px;
+		color: #FCF0AD;
+		padding: 5px;
+		position: relative;
+		right: 0px;
+		margin: 0;
+	}
+
+	.delete-item .icon {
+		top: 10px;
+	}
+
+	.delete-list .icon {
+		background-color: #E2D89B;
+		top: 10px;
+		right: 10px;
+	}
+
+	.delete-list:hover .icon {
+		background-color: #c32424;
+	}
+
+
+	.item {
+		max-width: 200px;
+		min-height: 20px;
+		font-size: 16px;
+		padding: 0;
+	}
+
+	.row {
+		min-height: 50px;
+	}
+
+	.add-button {
+		display: none;
+	}
+
+	footer {
+		position: static;
+	}
 }
 
 @media screen and (min-width: 0px) and (max-width: 649px) {
 
 	.wrap {
 		width: 280px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	
+	.columns {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
 	}
 
 	.container {
@@ -371,22 +463,27 @@ a:hover{
 		width: 100%;
 	}
 
+	.list-handle {
+		height: 20px;
+	}
+
 	.list-title {
 		width: 220px;
 		position: relative;
 		top: 5px;
-	}
-
-	.columns {
-		-webkit-column-count: 1;
-		-moz-column-count: 1;
-		column-count: 1;
-	}
+		font-size: 30px;
+	}	
 
 	.tickbox {
-		width: 25px;
-		height: 25px;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		margin-right: 5px;
 	}
+
+	.delete-list { margin: 10px; }
+
+	.delete-item { text-align: right;  height: 20px;}
 
 	.delete-list, .delete-item {
 		width: 25px;
@@ -396,34 +493,41 @@ a:hover{
 		 
 	}
 
-	.icon, .delete-list .icon {
+	.delete-item .icon, .delete-list .icon {
 		background-color: #c32424;
 		border: 0;
 		border-radius: 3px;
-		color: white;
-		padding: 10px;
+		color: #FCF0AD;
+		padding: 5px;
 		position: relative;
-		top: 5px;
-		right: 5px;
+		right: 0px;
 		margin: 0;
 	}
 
 	.delete-item .icon {
-		top: 15px;
+		top: 10px;
 	}
 
 	.delete-list .icon {
 		background-color: #E2D89B;
+		top: 10px;
+		right: 10px;
 	}
 
-	.delete-list { margin: 10px; }
+	.delete-list:hover .icon {
+		background-color: #c32424;
+	}
 
-	.delete-item { text-align: right;  height: 20px;}
 
 	.item {
-		max-width: 210px;
+		max-width: 200px;
 		min-height: 20px;
 		font-size: 16px;
+		padding: 0;
+	}
+
+	.row {
+		min-height: 50px;
 	}
 
 	.add-button {
@@ -432,10 +536,6 @@ a:hover{
 
 	footer {
 		position: static;
-	}
-
-	.wrap {
-		margin-bottom: 20px;
 	}
 
 }
