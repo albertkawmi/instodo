@@ -57,8 +57,14 @@ function newList() {$('.set-height').addClass('template');
     $('.new-list').before(blankList);
 
     makeSortable();
-    $('.container').hide().show(0);   
+    $('.container').redraw();   
 }
+
+jQuery.fn.redraw = function() {
+    return this.hide(0, function() {
+        $(this).show();
+    });
+};
 
 ////// Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -118,7 +124,7 @@ $(document).on('ready pagecreate',function(){
 ////// Delete a list
     $(document).on('click', '.delete-list', function() {
         $(this).parent('.list-holder').remove();
-        $('.container').hide().show(0);
+        $('.container').redraw();
     });
 
 ////// Save everything on window unload
