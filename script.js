@@ -73,7 +73,7 @@ $(document).on('ready pagecreate',function(){
     
 
 ////// Add todo items by click or by enter key    
-    $(document).on( 'click tap','.add-button', function() {
+    $(document).on( 'click','.add-button', function() {
             addItem( $(this).siblings('input') );
         });
     
@@ -89,12 +89,7 @@ $(document).on('ready pagecreate',function(){
                 $(this).blur();
                 return e.which != 13;
             }
-        });
-
-////// Delete row on swipeleft
-    $(document).on('swipeleft', '.row', function() {
-        $(this).remove();
-    });    
+        }); 
 
 ////// Show crosses on row hover
     $(document).on('mouseover', '.row', function(){
@@ -106,7 +101,7 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Delete a row
-    $(document).on('click touchstart', '.delete-item', function() {
+    $(document).on('click', '.delete-item', function() {
         $(this).parent('.row').remove();
     });
 
@@ -120,12 +115,12 @@ $(document).on('ready pagecreate',function(){
     $(document).on('click tap', '.new-list', newList);
 
 ////// Delete a list
-    $(document).on('click touchstart', '.delete-list', function() {
+    $(document).on('click', '.delete-list', function() {
         $(this).parent('.list-holder').remove();
     });
 
 ////// Save everything on window unload
-    $(window).bind("beforeunload", saveLocal);
+    //$(window).bind("beforeunload", saveLocal);
 
 ////// END Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 });

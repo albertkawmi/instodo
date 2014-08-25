@@ -437,7 +437,7 @@ a:hover{
 	}
 
 	footer {
-		position: static;
+		
 	}
 }
 
@@ -536,6 +536,10 @@ a:hover{
 
 	footer {
 		position: static;
+		width: 280px;
+		margin: 0 auto;
+		background: none;
+		color: gray;
 	}
 
 }
