@@ -93,7 +93,7 @@ $(document).on('ready pagecreate',function(){
 
 ////// Delete row on swipeleft
     $(document).on('swipeleft', '.row', function() {
-        $(this).parent('.row').remove();
+        $(this).remove();
     });    
 
 ////// Show crosses on row hover
@@ -111,7 +111,7 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Toggle 'ticked' for tickboxes
-    $(document).on('click touchstart', '.tickbox', function() {
+    $(document).on('click', '.tickbox', function() {
         $(this).next('.item').toggleClass('strike');
         $(this).toggleClass('ticked');
     });
