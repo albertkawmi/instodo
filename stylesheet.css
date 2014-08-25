@@ -486,8 +486,8 @@ a:hover{
 	.delete-item { text-align: right; }
 
 	.delete-list, .delete-item {
-		width: 25px;
-		height: 25px;
+		min-width: 25px;
+		min-height: 25px;
 		font-size: 16px;
 		margin: 0;
 		 
@@ -498,7 +498,7 @@ a:hover{
 		border: 0;
 		border-radius: 3px;
 		color: #FCF0AD;
-		padding: 5px;
+		padding: 0px;
 		position: relative;
 		right: 0px;
 		margin: 0;
@@ -506,12 +506,16 @@ a:hover{
 
 	.delete-item .icon {
 		top: 10px;
+		min-width: 25px;
+		min-height: 25px;
 	}
 
 	.delete-list .icon {
 		background-color: #E2D89B;
 		top: 10px;
 		right: 10px;
+		min-width: 205px;
+		min-height: 25px;
 	}
 
 	.delete-list:hover .icon {
