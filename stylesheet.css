@@ -265,6 +265,8 @@ a:hover{
 	background-color: #E2D89B;
 	margin-top: 2px;
 	cursor: pointer;
+	display: block;
+	float: left;
 }
 
 .tickbox:hover {
@@ -280,6 +282,8 @@ a:hover{
 	padding: 0 8px;
 	font-size: 12px;
 	margin-top: 2px;
+	display: block;
+	float: left;
 }
 
 .delete-list, .delete-item {
@@ -483,11 +487,16 @@ a:hover{
 
 	.delete-list { margin: 10px; }
 
-	.delete-item { text-align: right; }
+	.delete-item, .delete-list { 
+		position: relative;
+		right:0;
+
+		text-align: right; 
+	}
 
 	.delete-list, .delete-item {
-		min-width: 25px;
-		min-height: 25px;
+		width: 35px;
+		height: 35px;
 		font-size: 16px;
 		margin: 0;
 		 
@@ -498,7 +507,7 @@ a:hover{
 		border: 0;
 		border-radius: 3px;
 		color: #FCF0AD;
-		padding: 0px;
+		padding: 5px;
 		position: relative;
 		right: 0px;
 		margin: 0;
@@ -506,16 +515,13 @@ a:hover{
 
 	.delete-item .icon {
 		top: 10px;
-		min-width: 25px;
-		min-height: 25px;
+		right: 0px;
 	}
 
 	.delete-list .icon {
 		background-color: #E2D89B;
 		top: 10px;
 		right: 10px;
-		min-width: 205px;
-		min-height: 25px;
 	}
 
 	.delete-list:hover .icon {
@@ -524,7 +530,7 @@ a:hover{
 
 
 	.item {
-		max-width: 200px;
+		max-width: 190px;
 		min-height: 20px;
 		font-size: 16px;
 		padding: 0;

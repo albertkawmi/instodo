@@ -97,6 +97,11 @@ $(document).on('ready pagecreate',function(){
                 return e.which != 13;
             }
         }); 
+    /*
+    $(document).on('click', '.row', function(){
+        $(this).children('div').blur();
+    });
+    */
 
 ////// Show crosses on row hover
     $(document).on('mouseover', '.row', function(){
@@ -121,6 +126,7 @@ $(document).on('ready pagecreate',function(){
     $(document).on('click', '.tickbox', function() {
         $(this).next('.item').toggleClass('strike');
         $(this).toggleClass('ticked');
+        $('div').blur();
     });
 
 ////// Add a new list
