@@ -25,7 +25,7 @@ function addItem(element) {
 
         element.val("");
         element.focus();
-
+        $('.container').redraw();
         }
 
 function makeSortable() {
@@ -107,9 +107,14 @@ $(document).on('ready pagecreate',function(){
         $(this).children('.delete-item').addClass('hidden');
     });
 
+    $(document).on('focus', '.item', function(){
+        $('.delete-item').addClass('hidden');
+    });
+
 ////// Delete a row
     $(document).on('click', '.delete-item', function() {
         $(this).parent('.row').remove();
+        $('.container').redraw();
     });
 
 ////// Toggle 'ticked' for tickboxes
@@ -119,7 +124,8 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Add a new list
-    $(document).on('click tap', '.new-list', newList);    
+    $(document).on('click tap', '.new-list', newList);
+    $('.container').redraw();    
 
 ////// Delete a list
     $(document).on('click', '.delete-list', function() {
