@@ -56,7 +56,8 @@ function newList() {$('.set-height').addClass('template');
 
     $('.new-list').before(blankList);
 
-    makeSortable();   
+    makeSortable();
+    $('.container').hide().show(0);   
 }
 
 ////// Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -112,11 +113,12 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Add a new list
-    $(document).on('click tap', '.new-list', newList);
+    $(document).on('click tap', '.new-list', newList);    
 
 ////// Delete a list
     $(document).on('click', '.delete-list', function() {
         $(this).parent('.list-holder').remove();
+        $('.container').hide().show(0);
     });
 
 ////// Save everything on window unload
