@@ -180,9 +180,8 @@ footer {
 	padding: 10px;
 	position: fixed;
 	bottom: 0;
-	background-color: gray;
+	background-color: rgba(107,104,104,0.7);
 	width: 100%;
-	opacity: 0.7;
 	text-align: center;
 
 }
