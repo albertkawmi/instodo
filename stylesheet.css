@@ -252,6 +252,7 @@ a:hover{
 	background-color: #E2D89B;
 	border-radius: 0;
 	margin-bottom: 5px;
+	display:block;
 }
 
 .list-handle:hover {
@@ -310,7 +311,7 @@ a:hover{
 .delete-list .icon {
 	border: solid 1px #E2D89B;
 	padding: 3px;
-	border-radius: 5px;
+	border-radius: 2px;
 }
 
 .delete-list:hover {

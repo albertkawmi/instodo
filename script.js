@@ -25,9 +25,7 @@ function addItem(element) {
 
         element.val("");
         element.focus();
-        /*$(".item").keypress(function(e){ 
-            $(this).blur();
-            return e.which != 13; });*/
+        
         }
 
 function makeSortable() {
@@ -127,7 +125,7 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Save everything on window unload
-    //$(window).bind("beforeunload", saveLocal);
+    $(window).bind("beforeunload", saveLocal);
 
 ////// END Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 });
