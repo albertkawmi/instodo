@@ -84,7 +84,7 @@ $(document).on('ready pagecreate',function(){
         });
 
 ////// Listen for enter key on any item and unfocus (blur)
-    $(document).on('keypress', '.item .list-title', function(e){
+    $(document).on('keypress', 'div', function(e){
             if(e.which == 13){ //Enter key pressed
                 $(this).blur();
                 return e.which != 13;
