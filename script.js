@@ -111,11 +111,11 @@ $(document).on('ready pagecreate',function(){
     $(document).on('mouseleave', '.row', function(){
         $(this).children('.delete-item').addClass('hidden');
     });
-
+/*
     $(document).on('focus', '.item', function(){
         $('.delete-item').addClass('hidden');
     });
-
+*/
 ////// Delete a row
     $(document).on('click', '.delete-item', function() {
         $(this).parent('.row').remove();
