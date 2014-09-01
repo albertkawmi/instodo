@@ -140,7 +140,7 @@ $(document).on('ready pagecreate',function(){
     });
 
 ////// Save everything on window unload
-    //$(window).bind("beforeunload", saveLocal);
+    $(window).bind("beforeunload", saveLocal);
 
 ////// END Main Function ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 });
