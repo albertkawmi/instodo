@@ -16,7 +16,7 @@
 	<div style="float:left; margin-left:1em; padding: 1em">
     <li class="list" ng-repeat="list in lists | filter:{deleted:false}" ui-tree-node data-max-depth="1">
 		<div class="list-handle" ui-tree-handle></div>
-        <textarea msd-elastic class="edit-list-title" ng-enter="list.edit=false" ng-model="list.title" ng-blur="list.edit=false" focus-input="list.edit">{{list.title}}</textarea>
+        <textarea msd-elastic class="edit-list-title" ng-enter="list.edit=false; this.blur()" ng-focus="list.edit=true" ng-model="list.title" ng-blur="list.edit=false" focus-input="list.edit">{{list.title}}</textarea>
         <a class="delete-list" href="" ng-click="list.deleted = true" ng-show="!list.edit">&#9747;</a>   
 		<ul class="unstyled" ui-tree-nodes ng-model="list.todos">
 			<li class="todo" ng-repeat="todo in list.todos | filter:{deleted:false}" 
@@ -25,7 +25,7 @@
             ng-mouseleave="todo.hover = false">
                 <div class="todo-handle" ui-tree-handle><input type="checkbox" ng-model="todo.done" /></div>
 				<div class="todo-row">
-                    <textarea msd-elastic class="done-{{todo.done}}" ng-model="todo.text" ng-enter="todo.edit=false" ng-blur="todo.edit=false" focus-input="todo.edit">{{todo.text}}</textarea>
+                    <textarea msd-elastic class="done-{{todo.done}}" ng-model="todo.text" ng-enter="todo.edit=false; this.blur()" ng-focus="todo.edit=true" ng-blur="todo.edit=false" focus-input="todo.edit">{{todo.text}}</textarea>
                 </div>
                 <a class="delete-todo" href="" ng-click="todo.deleted = true" ng-show="!todo.edit && todo.hover">&#9747;</a>
 			</li>
