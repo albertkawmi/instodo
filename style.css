@@ -82,7 +82,16 @@ input[type=submit] {
 input[type=checkbox] {
     margin: 0;
     vertical-align: middle;
+    /*display: none;*/
 }
+
+/*input[type="checkbox"] + label {
+    color: silver;
+}
+
+input[type="checkbox"]:checked + label {
+    color: gray;
+}*/
 
 a.delete-todo, a.delete-list {float:right; margin-right: 10px; margin-top: 5px;}
 

@@ -23,7 +23,10 @@
             ui-tree-node data-max-depth="2"
             ng-mouseover="todo.hover = true"
             ng-mouseleave="todo.hover = false">
-                <div class="todo-handle" ui-tree-handle><input type="checkbox" ng-model="todo.done" /></div>
+                <div class="todo-handle" ui-tree-handle>
+                    <input id="{{getId(lists, list, todos, todo)}}" type="checkbox" ng-model="todo.done" />
+                    <!--<label for="{{getId(lists, list, todos, todo)}}">&#10004;</label>-->
+                </div>
 				<div class="todo-row">
                     <textarea msd-elastic class="done-{{todo.done}}" ng-model="todo.text" ng-enter="todo.edit=false; this.blur()" ng-focus="todo.edit=true" ng-blur="todo.edit=false" focus-input="todo.edit">{{todo.text}}</textarea>
                 </div>

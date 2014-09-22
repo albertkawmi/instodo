@@ -47,6 +47,10 @@ app.controller('TodoController', ['$scope', function ($scope) {
         selected.edit = true;
     };
 
+    $scope.getId = function(lists, list, todos, todo) {
+        return lists.indexOf(list)+"."+list.todos.indexOf(todo);
+    }
+
     $scope.treeOptions = {
         accept: function(sourceNodeScope, destNodesScope, destIndex) {
         //console.log(sourceNodeScope.depth() + " -- " + destNodesScope.depth());
