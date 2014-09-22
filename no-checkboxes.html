@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Instant, shareable lists | Instodo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"></script> 
+    <script src="angular-ui-tree.min.js"></script>
+    <script src="elastic.js"></script>
+    <script src="ng-instodo.js"></script>
+    <link rel="stylesheet" href="angular-ui-tree.min.css">
+    <link rel="stylesheet" href="reset-forms.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="instodo" ng-controller="TodoController">
+<div ui-tree="treeOptions">
+<ul class="unstyled" ng-cloak ui-tree-nodes ng-model="lists">
+	<div style="float:left; margin-left:1em; padding: 1em">
+    <li class="list" ng-repeat="list in lists | filter:{deleted:false}" ui-tree-node data-max-depth="1">
+		<div class="list-handle" ui-tree-handle></div>
+        <textarea msd-elastic class="edit-list-title" ng-enter="list.edit=false; this.blur()" ng-focus="list.edit=true" ng-model="list.title" ng-blur="list.edit=false" focus-input="list.edit">{{list.title}}</textarea>
+        <a class="delete-list" href="" ng-click="list.deleted = true" ng-show="!list.edit">&#10006;</a>   
+		<ul class="unstyled" ui-tree-nodes ng-model="list.todos">
+			<li class="todo" ng-repeat="todo in list.todos | filter:{deleted:false}" 
+            ui-tree-node data-max-depth="2"
+            ng-mouseover="todo.hover = true"
+            ng-mouseleave="todo.hover = false">
+                <div class="todo-handle" ui-tree-handle></div>
+                <div class="box check-{{todo.done}}" ng-click="todo.done=!todo.done"></div>
+				<div class="todo-row">
+                    <textarea msd-elastic class="done-{{todo.done}}" ng-model="todo.text" ng-enter="todo.edit=false; this.blur()" ng-focus="todo.edit=true" ng-blur="todo.edit=false" focus-input="todo.edit">{{todo.text}}</textarea>
+                </div>
+                <a class="delete-todo" href="" ng-click="todo.deleted = true" ng-show="!todo.edit && todo.hover">&#10006;</a>
+			</li>
+		</ul>
+      <textarea msd-elastic class="add-todo" ng-model="list.todoText" placeholder="Add a todo and hit enter..." ng-enter="addTodo(list)"></textarea>
+	</li>
+        <p><a href="" ng-click="addList()">[ +New List ]</a></p><hr />
+        <p>Deleted Items:</p>
+        <ul>
+            <li ng-repeat="list in lists">{{list.title}}, {{list.deleted}}
+            <a href="" ng-click="list.deleted=false" ng-show="list.deleted">[ restore list ]</a>
+            <ul>
+                <li ng-repeat="todo in list.todos | filter:{deleted:true}">{{todo.text}}, deleted? {{todo.deleted}}
+                    <a href="" ng-click="todo.deleted=false" ng-show="todo.deleted">[ restore todo ]</a></li></ul>
+                </li>
+            </ul>
+        <hr />
+        </div>
+        <div style="float:left; margin-left:3em; padding: 2em">
+<pre>{{ lists | json}}</pre>
+        </div>
+</ul>
+</div>
+</body>
+</html>
+      

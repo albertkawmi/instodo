@@ -2,6 +2,11 @@ html {
     font-family: Arial;
 }
 
+div {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 li {
     display: block;
     text-indent: 0;
@@ -33,6 +38,7 @@ li.todo {
     padding: 0;
     clear: both;
     border-top: dotted 1px silver;
+    overflow: auto;
 } 
 
 li.todo:hover {
@@ -52,11 +58,14 @@ textarea {
     height: 18px;
     line-height: 22px;
     padding: 0;
+    padding-right: 5px;
     margin: 0;
     resize: none;
     font-size: 14px;
     font-family: Arial;
     border: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 } 
 
 textarea.edit-list-title {
@@ -102,10 +111,10 @@ a.delete-todo, a.delete-list {float:right; margin-right: 10px; margin-top: 5px;}
 }
 
 .todo-handle {
-    /*background-color: silver;*/
     padding: 5px;
     padding-left: 15px;
-    margin: 5px;
+    height: 15px;
+    margin: 0;
     float: left;
 }
 
@@ -120,4 +129,34 @@ a.delete-todo, a.delete-list {float:right; margin-right: 10px; margin-top: 5px;}
 
 .visible-false {
     visibility: hidden;
+}
+
+.box {
+    float: left;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin: 10px;
+    margin-top: 8px;
+    color: black;
+    font-size: 10px;
+    border: solid 3px silver;
+    text-align: center;
+    line-height: 10px;
+    padding:0;
+
+}
+
+.box:hover {
+    border: solid 3px gray;
+}
+
+.check-false {
+    background-color: silver;
+    content: '';
+}
+
+.check-true {
+    background-color: gray;
 }
