@@ -1,0 +1,114 @@
+html {
+    font-family: Arial;
+}
+
+li {
+    display: block;
+    text-indent: 0;
+    margin:0;
+    padding: 0;
+}
+
+a, a:visited {color: silver; text-decoration: none;}
+
+input[type=submit] { vertical-align: top; }
+
+.done-true {
+    text-decoration: line-through;
+    color: gray;
+}
+        
+.todo-row { 
+    margin:0;
+	padding: 0px;
+    padding-top: 5px;
+    font-size: 14px;
+    float: left;
+    overflow: auto;
+}
+
+li.todo { 
+    width: 100%; 
+    margin: 0px;
+    padding: 0;
+    clear: both;
+    border-top: dotted 1px silver;
+} 
+
+li.todo:hover {
+    
+}
+
+.list {
+    width: 300px;
+    box-sizing: border-box;
+    border: solid silver 1px;
+    padding: 0px;
+    margin: 10px;
+}  
+
+textarea {
+    width: 220px;
+    height: 18px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    resize: none;
+    font-size: 14px;
+    font-family: Arial;
+    border: 0;
+} 
+
+textarea.edit-list-title {
+    font-size: 24px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+textarea.add-todo {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    border: 0;
+    border-top: dotted 1px silver;
+    clear: both;
+}
+
+input[type=submit] {
+    margin: 5px;
+    margin-left: 0;
+}
+
+input[type=checkbox] {
+    margin: 0;
+    vertical-align: middle;
+}
+
+a.delete-todo, a.delete-list {float:right; margin-right: 10px; margin-top: 5px;}
+
+.list-handle {
+    height: 14px;
+    background-color: silver;
+    margin-bottom: 5px;
+}
+
+.todo-handle {
+    /*background-color: silver;*/
+    padding: 5px;
+    padding-left: 15px;
+    margin: 5px;
+    float: left;
+}
+
+.unstyled {
+    list-style: none;
+    margin: 0;
+}
+
+.visible-true {
+    visibility: visible;
+}
+
+.visible-false {
+    visibility: hidden;
+}
