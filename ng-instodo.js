@@ -2,20 +2,29 @@ var app = angular.module('instodo', ['ui.tree', 'monospaced.elastic']);
 
 app.controller('TodoController', ['$scope', function ($scope) {
     $scope.lists = [
-        {title: 'List 1', deleted: false, edit: false, todos: [
-            {done: false, deleted: false, edit: false, text: 'item 1'}, 
-            {done: false, deleted: false, edit: false, text: 'item 2'}, 
-            {done: false, deleted: false, edit: false, text: 'item 3'}] 
+        {title: 'Adwords', deleted: false, edit: false, todos: [
+            {done: false, deleted: false, edit: false, text: 'Check linking of Adwords to all Google Analytics accounts'}, 
+            {done: false, deleted: false, edit: false, text: 'Shared Budgets'}, 
+            {done: false, deleted: false, edit: false, text: 'Enhanced CPC'},
+            {done: false, deleted: false, edit: false, text: 'Remarketing for single hotel with most traffic'},
+            {done: false, deleted: false, edit: false, text: 'Location Extensions'},
+            {done: false, deleted: false, edit: false, text: 'Call Extensions'},
+            {done: false, deleted: false, edit: false, text: 'Site Extensions'},
+            {done: false, deleted: false, edit: false, text: 'Mobile separate ads'},
+            {done: false, deleted: false, edit: false, text: 'Mobile bid adjustments (+15%)'},
+            {done: false, deleted: false, edit: false, text: 'Category landing pages e.g. Weddings'}] 
         }, 
-        {title: 'List 2', deleted: false, edit: false, todos: [
-            {done: false, deleted: false, edit: false, text: 'item A'}, 
-            {done: false, deleted: false, edit: false, text: 'A really long todo item. This will be used to check that it doesn\'t break the layout. Cool.'}, 
-            {done: false, deleted: false, edit: false, text: 'item C'}] 
+        {title: 'Joomla Training', deleted: false, edit: false, todos: [
+            {done: false, deleted: false, edit: false, text: 'Galleries'}, 
+            {done: false, deleted: false, edit: false, text: 'Offers'}, 
+            {done: false, deleted: false, edit: false, text: 'Documents'},
+            {done: false, deleted: false, edit: false, text: 'Buttons and in-article links'},
+            {done: false, deleted: false, edit: false, text: 'Other HTML - hr, is-introduction, heading tags, telephone links'}] 
         }, 
-        {title: 'List 3', deleted: false, edit: false, todos: [
-            {done: false, deleted: false, edit: false, text: 'item x'}, 
-            {done: false, deleted: false, edit: false, text: 'item y'}, 
-            {done: false, deleted: false, edit: false, text: 'item z'}] 
+        {title: 'Google My Business', deleted: false, edit: false, todos: [
+            {done: false, deleted: false, edit: false, text: 'Update hotel pages'}, 
+            {done: false, deleted: false, edit: false, text: 'Add hotel reviews'}, 
+            {done: false, deleted: false, edit: false, text: 'Verify location - with Graeme'}] 
     }];
 
     $scope.addList = function () {

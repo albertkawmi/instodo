@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body ng-app="instodo" ng-controller="TodoController">
-<div ui-tree="treeOptions">
+<div class="container" ui-tree="treeOptions">
 <ul class="unstyled" ng-cloak ui-tree-nodes ng-model="lists">
-	<div style="float:left; margin-left:1em; padding: 1em">
     <li class="list" ng-repeat="list in lists | filter:{deleted:false}" ui-tree-node data-max-depth="1">
 		<div class="list-handle" ui-tree-handle></div>
         <textarea msd-elastic class="edit-list-title" ng-enter="list.edit=false; this.blur()" ng-focus="list.edit=true" ng-model="list.title" ng-blur="list.edit=false" focus-input="list.edit">{{list.title}}</textarea>
@@ -33,7 +32,8 @@
 		</ul>
       <textarea msd-elastic class="add-todo" ng-model="list.todoText" placeholder="Add a todo and hit enter..." ng-enter="addTodo(list)"></textarea>
 	</li>
-        <p><a href="" ng-click="addList()">[ +New List ]</a></p><hr />
+        <p><a href="" ng-click="addList()">[ + New List ]</a></p>
+        <hr />
         <p>Deleted Items:</p>
         <ul>
             <li ng-repeat="list in lists">{{list.title}}, {{list.deleted}}
@@ -43,11 +43,6 @@
                     <a href="" ng-click="todo.deleted=false" ng-show="todo.deleted">[ restore todo ]</a></li></ul>
                 </li>
             </ul>
-        <hr />
-        </div>
-        <div style="float:left; margin-left:3em; padding: 2em">
-<pre>{{ lists | json}}</pre>
-        </div>
 </ul>
 </div>
 </body>

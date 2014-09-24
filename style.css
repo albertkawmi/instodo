@@ -2,6 +2,14 @@ html {
     font-family: Arial;
 }
 
+body {
+    background-color: black;
+    background-image: url('chalkboard.jpg');
+    background-repeat: repeat;
+    padding: 0;
+    margin: 0;
+}
+
 div {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -12,15 +20,25 @@ li {
     text-indent: 0;
     margin:0;
     padding: 0;
+    background-color: #FCF0AD;
 }
 
-a, a:visited {color: silver; text-decoration: none;}
+.container {
+    margin: 0 auto;
+    padding:0;
+}
+
+a, a:visited {color: #E2D89B; text-decoration: none;}
 
 input[type=submit] { vertical-align: top; }
+::-webkit-input-placeholder { color: #E2D89B; font-weight: bold;}
+:-moz-placeholder { /* Firefox 18- */color: #E2D89B;  font-weight: bold;}
+::-moz-placeholder {  /* Firefox 19+ */color: #E2D89B;  font-weight: bold;}
+:-ms-input-placeholder {color: #E2D89B;  font-weight: bold;}
 
 .done-true {
     text-decoration: line-through;
-    color: gray;
+    color: #84962B;
 }
         
 .todo-row { 
@@ -37,8 +55,9 @@ li.todo {
     margin: 0px;
     padding: 0;
     clear: both;
-    border-top: dotted 1px silver;
+    border-top: dotted 1px #E2D89B;
     overflow: auto;
+    background-color: #FCF0AD;
 } 
 
 li.todo:hover {
@@ -48,13 +67,16 @@ li.todo:hover {
 .list {
     width: 300px;
     box-sizing: border-box;
-    border: solid silver 1px;
+    -webkit-box-sizing: border-box;
     padding: 0px;
-    margin: 10px;
+    margin: 10px auto;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px black;
 }  
 
 textarea {
-    width: 220px;
+    width: 200px;
     height: 18px;
     line-height: 22px;
     padding: 0;
@@ -66,6 +88,7 @@ textarea {
     border: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    background-color: #FCF0AD;
 } 
 
 textarea.edit-list-title {
@@ -79,7 +102,7 @@ textarea.add-todo {
     margin: 0;
     padding: 5px;
     border: 0;
-    border-top: dotted 1px silver;
+    border-top: dotted 1px #E2D89B;
     clear: both;
 }
 
@@ -95,19 +118,26 @@ input[type=checkbox] {
 }
 
 /*input[type="checkbox"] + label {
-    color: silver;
+    color: #E2D89B;
 }
 
 input[type="checkbox"]:checked + label {
-    color: gray;
+    color: #84962B;
 }*/
 
 a.delete-todo, a.delete-list {float:right; margin-right: 10px; margin-top: 5px;}
+a.delete-list:hover {
+    color: red;
+}
 
 .list-handle {
     height: 14px;
-    background-color: silver;
+    background-color: #E2D89B;
     margin-bottom: 5px;
+}
+
+.list-handle:hover {
+    background-color: #84962B; 
 }
 
 .todo-handle {
@@ -121,6 +151,7 @@ a.delete-todo, a.delete-list {float:right; margin-right: 10px; margin-top: 5px;}
 .unstyled {
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 .visible-true {
@@ -141,7 +172,7 @@ a.delete-todo, a.delete-list {float:right; margin-right: 10px; margin-top: 5px;}
     margin-top: 8px;
     color: black;
     font-size: 10px;
-    border: solid 3px silver;
+    border: solid 3px #E2D89B;
     text-align: center;
     line-height: 10px;
     padding:0;
@@ -149,14 +180,18 @@ a.delete-todo, a.delete-list {float:right; margin-right: 10px; margin-top: 5px;}
 }
 
 .box:hover {
-    border: solid 3px gray;
+    border: solid 3px #84962B;
 }
 
 .check-false {
-    background-color: silver;
+    background-color: #E2D89B;
     content: '';
 }
 
 .check-true {
-    background-color: gray;
+    background-color: #84962B;
+}
+
+p {
+    text-align: center;
 }
