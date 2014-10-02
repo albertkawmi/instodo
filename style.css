@@ -26,6 +26,7 @@ li {
 .container {
     margin: 0 auto;
     padding:0;
+    text-align: center;
 }
 
 a, a:visited {color: #E2D89B; text-decoration: none;}
@@ -194,4 +195,13 @@ a.delete-list:hover {
 
 p {
     text-align: center;
+}
+
+.filter-input {
+    border: solid 1px white;
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+    margin: 0 auto;
+    width: 320px;
+    outline: 0;
 }

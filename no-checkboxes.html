@@ -12,8 +12,9 @@
 </head>
 <body ng-app="instodo" ng-controller="TodoController">
 <div class="container" ui-tree="treeOptions">
+<input class="filter-input" ng-model="filterInput" type="text" placeholder="Filter your lists..."/>
 <ul class="unstyled" ng-cloak ui-tree-nodes ng-model="lists">
-    <li class="list" ng-repeat="list in lists | filter:{deleted:false}" ui-tree-node data-max-depth="1">
+    <li class="list" ng-repeat="list in lists | filter:filterInput | filter:{deleted:false}" ui-tree-node data-max-depth="1">
 		<div class="list-handle" ui-tree-handle></div>
         <textarea msd-elastic class="edit-list-title" ng-enter="list.edit=false; this.blur()" ng-focus="list.edit=true" ng-model="list.title" ng-blur="list.edit=false" focus-input="list.edit">{{list.title}}</textarea>
         <a class="delete-list" href="" ng-click="list.deleted = true" ng-show="!list.edit">&#10006;</a>   
