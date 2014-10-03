@@ -199,15 +199,9 @@ p {
 
 .filter-input {
     border: solid 1px white;
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
     margin: 0 auto;
     width: 320px;
-}
-
-header {
-    background-color: white;
-    color: black;
-}
-
-header a {
-    color: black;
+    outline: 0;
 }

@@ -12,10 +12,7 @@
 </head>
 <body ng-app="instodo" ng-controller="TodoController">
 <div class="container" ui-tree="treeOptions">
-    <header>
-        <p><a href="" ng-click="addList()">[ + New List ]</a></p>
-        <input class="filter-input" ng-model="filterInput" type="text" placeholder="Filter your lists..."/>
-    </header>
+<input class="filter-input" ng-model="filterInput" type="text" placeholder="Filter your lists..."/>
 <ul class="unstyled" ng-cloak ui-tree-nodes ng-model="lists">
     <li class="list" ng-repeat="list in lists | filter:filterInput | filter:{deleted:false}" ui-tree-node data-max-depth="1">
 		<div class="list-handle" ui-tree-handle></div>
