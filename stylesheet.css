@@ -118,6 +118,7 @@ ul, li {
 
 .add-button:hover {
 	background-color: #84962B;
+	color: white;
 }
 
 .add-row {
@@ -321,6 +322,7 @@ a:hover{
 
 .delete-list:hover {
 	border-color: #BCB381;
+	color: red;
 }
 
 .plus-symbol { display:inline-block; vertical-align: middle; margin: 0 auto; }
